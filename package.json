@@ -4,7 +4,11 @@
     "description": "This is e-commerce backend api",
     "main": "src/index.server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src/index.server.js",
+        "dev": "nodemon src/index.server.js",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client"
     },
     "keywords": [
         "e-commerce",
