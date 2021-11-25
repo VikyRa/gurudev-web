@@ -109,7 +109,12 @@ app.use('/public',express.static(path.join(__dirname,'uploads')));
 // CREATE
 
 
-app.use(express.static(path.join(__dirname, "../client/build")));
+if(proceess.env.NODE_ENV=='producation'){
+  app.use(express.static('../client/build'));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
+  });
+}
 
 app.use(errorHandler);
 
