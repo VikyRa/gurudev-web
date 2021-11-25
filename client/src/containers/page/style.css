@@ -1,0 +1,13 @@
+.blogimg{
+    height: 220px;
+    width: 100%;
+}
+.box .desc{
+    text-align: justify;
+}
+
+@media(min-width:786px){
+    .cardblog{
+        height: 500px;
+    }
+}

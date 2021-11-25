@@ -1,0 +1,21 @@
+
+.pagination li{
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+    border: 1px solid grey;
+    text-align: center;
+    padding-top: 12px;
+    font-size: 15px;
+}
+.pagination li a{
+    padding: 4px;
+   
+}
+.pagination .active{
+    background-color: #EAB608;
+}
+.pagination .active a{
+    color: #fff !important;
+}
