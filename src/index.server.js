@@ -10,7 +10,11 @@ const cookieParser = require("cookie-parser");
 
 
 // CALL ENVERMENT VARIABLE
-env.config();
+// env.config();
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  env.config();
+}
+
 // CREATE APP USING EXPRESS
 const app = express();
 
@@ -109,12 +113,18 @@ app.use('/public',express.static(path.join(__dirname,'uploads')));
 // CREATE
 
 
-if(proceess.env.NODE_ENV=='producation'){
-  app.use(express.static('../client/build'));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
-  });
-}
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
+});
+
+// if(proceess.env.NODE_ENV=='producation'){
+//   app.use(express.static('../client/build'));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
+//   });
+// }
 
 app.use(errorHandler);
 
