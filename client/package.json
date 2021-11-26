@@ -70,7 +70,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://aloclient.herokuapp.com",
+  "proxy": "https://astrologeralo.herokuapp.com",
   "eslintConfig": {
     "extends": [
       "react-app",
