@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // 'mongodb://localhost:27017/alo'
-const db = mongoose.connect(process.env.ONLINE_DB_URL, {
+const db = mongoose.connect('mongodb+srv://gurudevweb:gurudevweb@gurudevweb.pgz0y.mongodb.net/gurudevweb?retryWrites=true&w=majority', {
         useCreateIndex: true,
         useNewUrlParser: true,
         useUnifiedTopology: true,
